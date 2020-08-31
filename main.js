@@ -12,7 +12,7 @@ const config = require("./storages/config.json");
 const TOKEN = process.env.TOKEN;
 const client = bot;
 const pings = ["https://discord.gg/"]
-const prefix = "fg!"
+const prefix = config.prefix;
 bot.on("message", message => {
   let args = message.content
     .slice(prefix.length)
