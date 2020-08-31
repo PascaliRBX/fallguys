@@ -8,7 +8,7 @@ e.setThumbnail(message.guild.iconURL)
 e.addField(`\u200b`, `${args.join(' ')}`)
 e.setFooter("Ja/Gut = :+1: | Nein/Schlecht = :-1:")
 e.setTimestamp()
-message.channel.send().then(ch => {
+message.channel.send(e).then(ch => {
 await ch.react("👍")
 await ch.react("👎")
 })
