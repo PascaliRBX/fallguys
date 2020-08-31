@@ -45,5 +45,17 @@ bot.on("ready", () => {
     }
   });
 });
+client.on("message", async message =>{
 
+     const guild = bot.guilds.get("744487801013403761");
+      var memberCount = guild.members.filter(member => !member.user.bot).size;  
+      var memberCountChannel = bot.channels.get("744503100311601222");
+      memberCountChannel.setName(`Member: ${memberCount}`);
+     var botCount = guild.members.filter(member => member.user.bot).size;
+      var botCountChannel = bot.channels.get("750017853725474881");
+      botCountChannel.setName(`Bots: ${botCount}`);
+       var allCount = guild.memberCount
+      var allCountChannel = bot.channels.get("750017923640459379");
+      allCountChannel.setName(`Member und Bots: ${allCount}`);
+   });
 bot.login(TOKEN);
