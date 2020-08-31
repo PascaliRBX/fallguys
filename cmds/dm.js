@@ -7,7 +7,6 @@ exports.run = async (bot, message, args) => {
   .addField(`Eine Neue Nachricht von: ${message.author.tag}` , `${args.join(' ')}`, true)
   .setTimestamp()
   .setThumbnail(member.avatarURL)
-  .setFooter(member.tag , member.avatarURL)
   .setColor("BLUE");
   member.send(embed).then (ch => {
   ch.send("Deine Nachricht wurde versendet!")
