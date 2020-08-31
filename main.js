@@ -56,6 +56,6 @@ client.on("message", async message =>{
       botCountChannel.setName(`Bots: ${botCount}`);
        var allCount = guild.memberCount
       var allCountChannel = bot.channels.get("750017923640459379");
-      allCountChannel.setName(`Member und Bots: ${allCount}`);
+      allCountChannel.setName(`Member + Bots: ${allCount}`);
    });
 bot.login(TOKEN);
