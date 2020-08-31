@@ -34,11 +34,7 @@ bot.on("message", message => {
 
 
 bot.on("ready", () => {
-   var neustart = bot.channels.get("747469872266608744");
-  var emb = new Discord.RichEmbed()
-  emb.setTitle("Bot wurde neu gestartet!")
-  emb.setTimestamp()
-  neustart.send(emb)
+
   console.log(`Glitch ---> ${client.user.tag} = ready`);
   console.log("https://thoracic-band-zone.glitch.me");
   bot.user.setStatus("online");
