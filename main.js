@@ -40,8 +40,9 @@ bot.on("ready", () => {
   bot.user.setStatus("online");
   bot.user.setPresence({
     game: {
-      name: "Ich liebe Fall Guys",
-      type: "PLAYING"
+      name: "Gaming Community",
+      type: "PLAYING",
+      url: "https://twitch.tv/Pascaldark"
     }
   });
 });
