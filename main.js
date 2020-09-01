@@ -46,18 +46,12 @@ bot.on("ready", () => {
   });
 });
 client.on("guildMemberAdd", member => {
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Lieblingsfarben▄▄▄▄▄▄▄▄▄▄"))
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Geschlecht▄▄▄▄▄▄▄▄▄▄"))
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Sexualität▄▄▄▄▄▄▄▄▄▄"))
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Alter▄▄▄▄▄▄▄▄▄▄"))
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Gaming Rollen▄▄▄▄▄▄▄▄▄▄"))
-  member.addRole(member.guild.roles.find(role => role.name === "▄▄▄▄▄▄▄▄▄▄Bundesland▄▄▄▄▄▄▄▄▄▄"))
-  let joinServer = member.guild.channels.find(c => c.name === 'willkommen-bot')
+  let joinServer = member.guild.channels.find(c => c.name === '🎇wilkommen🎇')
   let joinEmbed = new Discord.RichEmbed()
   joinEmbed.setTitle("__Willkommen__")
-  joinEmbed.addField(`Hallo **__${member.user.tag}__** Willkommen auf **__${member.guild}__**.` , "Bitte lese dir die Regeln in <#743216501435138108> durch und bestätige sie mit :white_check_mark:")
+  joinEmbed.addField(`Hallo **__${member.user.tag}__** Willkommen auf **__${member.guild}__**.` , "Habe viel spaß auf diesem Server :grin:")
   joinEmbed.addField(`Du bist unser \`${member.guild.memberCount}\` User`,`Guck dir auch <#743226477637664768> an!`)
-  joinEmbed.setImage("https://www.osustuff.org/img/imageslice/2020-08-26/126100/698991.jpg")
+  joinEmbed.setImage("https://cdn.discordapp.com/attachments/746461997029392444/750340065804288050/gamers_community.webp")
   joinEmbed.setTimestamp()
   joinEmbed.setColor("GREEN");
   let joinEmbed2 = new Discord.RichEmbed()
@@ -67,8 +61,6 @@ client.on("guildMemberAdd", member => {
   joinEmbed2.setColor("BLUE")
   if (!joinServer) return;
   joinServer.send(joinEmbed)
-  member.setNickname(`Member || ${member.user.tag}`)
-  member.send(joinEmbed2)
 const guild = bot.guilds.get("744487801013403761");
       var memberCount = guild.members.filter(member => !member.user.bot).size;  
       var memberCountChannel = bot.channels.get("744503100311601222");
